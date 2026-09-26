@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background: #03040a;
+
+  font-family:
+    "Noto Sans JP",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+canvas {
+  display: block;
+}
+
+#startScreen {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 100;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(130, 20, 20, 0.35),
+      rgba(0, 0, 0, 0.92)
+    );
+}
+
+.startPanel {
+  width: min(520px, 90vw);
+
+  padding: 45px;
+
+  text-align: center;
+
+  color: white;
+
+  background:
+    rgba(18, 10, 12, 0.94);
+
+  border:
+    1px solid rgba(255, 190, 90, 0.35);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 30px 100px black;
+}
+
+.subTitle {
+  color: #d89a45;
+
+  letter-spacing: 5px;
+
+  font-size: 12px;
+}
+
+.startPanel h1 {
+  margin:
+
+    12px 0 10px;
+
+  font-size: 42px;
+
+  color: #ffd078;
+}
+
+.startPanel p {
+  color: #ccc;
+
+  margin-bottom: 30px;
+}
+
+#startButton {
+  border: none;
+
+  padding:
+    14px 38px;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      #d52a2a,
+      #8d1010
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+#startButton:hover {
+  transform: scale(1.05);
+}
+
+.controls {
+  margin-top: 25px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+#hud {
+  position: fixed;
+
+  left: 20px;
+  top: 18px;
+
+  color: white;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  text-shadow:
+    0 2px 6px black;
+}
+
+#gameTitle {
+  font-size: 20px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
+}
+
+#location {
+  margin-top: 5px;
+
+  color: #ffce73;
+
+  font-size: 13px;
+}
+
+#crosshair {
+  position: fixed;
+
+  left: 50%;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.7);
+
+  pointer-events: none;
+
+  z-index: 10;
+}
